@@ -8,31 +8,31 @@ import fsys.config;
 /*DSG{{*/
 mainForm = win.form(text="Nutz项目脚手架创建工具";right=671;bottom=407;max=false)
 mainForm.add(
-DataSourceStatic={cls="static";text="DataSource";left=288;top=168;right=356;bottom=194;align="center";center=1;transparent=1;z=13};
-createButton={cls="button";text="生成";left=48;top=336;right=177;bottom=363;tabstop=1;z=25};
-dataSource={cls="combobox";left=360;top=168;right=529;bottom=194;edge=1;items={"Druid";"HikariCP";"C3P0";"Tomcat JDBC Pool";"Apache DBCP"};mode="dropdownlist";tabstop=1;z=14};
-databaseAdapter={cls="combobox";left=120;top=168;right=280;bottom=194;edge=1;items={"mysql";"postgresql";"oracle"};mode="dropdownlist";tabstop=1;z=12};
-databaseAdapterStatic={cls="static";text="数据库类型";left=40;top=168;right=108;bottom=194;align="center";center=1;transparent=1;z=11};
-databaseHost={cls="edit";left=360;top=200;right=480;bottom=226;autovscroll=false;edge=1;tabstop=1;z=18};
-databaseHostStatic={cls="static";text="数据库地址";left=288;top=200;right=356;bottom=226;align="center";center=1;transparent=1;z=17};
-databaseName={cls="edit";left=120;top=200;right=280;bottom=226;autovscroll=false;edge=1;tabstop=1;z=16};
-databaseNameStatic={cls="static";text="数据库名";left=40;top=200;right=108;bottom=226;align="center";center=1;transparent=1;z=15};
-databasePassword={cls="edit";left=288;top=240;right=354;bottom=266;autovscroll=false;edge=1;tabstop=1;z=24};
-databasePasswordStatic={cls="static";text="数据库密码";left=208;top=240;right=276;bottom=266;align="center";center=1;transparent=1;z=23};
-databasePort={cls="edit";text="3306";left=552;top=200;right=608;bottom=226;autovscroll=false;edge=1;num=1;tabstop=1;z=20};
-databasePortStatic={cls="static";text="数据库端口";left=480;top=200;right=548;bottom=226;align="center";center=1;transparent=1;z=19};
-databaseUsername={cls="edit";left=120;top=240;right=200;bottom=266;autovscroll=false;edge=1;tabstop=1;z=22};
-databaseUsernameStatic={cls="static";text="数据库用户名";left=40;top=240;right=112;bottom=266;align="center";center=1;transparent=1;z=21};
-groupbox1={cls="groupbox";text="项目设置";left=32;top=24;right=616;bottom=128;edge=1;z=1};
-groupbox2={cls="groupbox";text="数据库设置";left=32;top=144;right=616;bottom=280;edge=1;z=10};
-hasJUnit={cls="checkbox";text="是否使用JUnit";left=504;top=48;right=608;bottom=64;z=6};
-packageName={cls="edit";left=336;top=48;right=497;bottom=74;autovscroll=false;edge=1;tabstop=1;z=5};
-packageNameLabel={cls="static";text="项目包名";left=272;top=48;right=333;bottom=76;align="center";center=1;transparent=1;z=4};
-projectName={cls="edit";left=96;top=48;right=257;bottom=74;autovscroll=false;edge=1;tabstop=1;z=3};
-projectNameLabel={cls="static";text="项目名";left=40;top=48;right=101;bottom=76;align="center";center=1;transparent=1;z=2};
-projectPath={cls="edit";left=96;top=88;right=381;bottom=114;autovscroll=false;edge=1;tabstop=1;z=8};
-projectPathButton={cls="button";text="选择..";left=400;top=88;right=494;bottom=114;tabstop=1;z=9};
-projectPathStatic={cls="static";text="项目地址";left=32;top=88;right=100;bottom=114;align="center";center=1;transparent=1;z=7}
+DataSourceStatic={cls="static";text="DataSource";left=288;top=168;right=356;bottom=194;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=13};
+createButton={cls="button";text="生成";left=48;top=336;right=177;bottom=363;font=LOGFONT(name='微软雅黑');tabstop=1;z=25};
+dataSource={cls="combobox";left=360;top=168;right=529;bottom=194;edge=1;font=LOGFONT(name='微软雅黑');items={"Druid";"HikariCP";"C3P0";"Tomcat JDBC Pool";"Apache DBCP"};mode="dropdownlist";tabstop=1;z=14};
+databaseAdapter={cls="combobox";left=120;top=168;right=280;bottom=194;edge=1;font=LOGFONT(name='微软雅黑');items={"mysql";"postgresql";"oracle"};mode="dropdownlist";tabstop=1;z=12};
+databaseAdapterStatic={cls="static";text="数据库类型";left=40;top=168;right=108;bottom=194;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=11};
+databaseHost={cls="edit";left=360;top=200;right=480;bottom=226;autovscroll=false;edge=1;font=LOGFONT(name='微软雅黑');tabstop=1;z=18};
+databaseHostStatic={cls="static";text="数据库地址";left=288;top=200;right=356;bottom=226;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=17};
+databaseName={cls="edit";left=120;top=200;right=280;bottom=226;autovscroll=false;edge=1;font=LOGFONT(name='微软雅黑');tabstop=1;z=16};
+databaseNameStatic={cls="static";text="数据库名";left=40;top=200;right=108;bottom=226;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=15};
+databasePassword={cls="edit";left=288;top=240;right=354;bottom=266;autovscroll=false;edge=1;font=LOGFONT(name='微软雅黑');tabstop=1;z=24};
+databasePasswordStatic={cls="static";text="数据库密码";left=208;top=240;right=276;bottom=266;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=23};
+databasePort={cls="edit";text="3306";left=552;top=200;right=608;bottom=226;autovscroll=false;edge=1;font=LOGFONT(name='微软雅黑');num=1;tabstop=1;z=20};
+databasePortStatic={cls="static";text="数据库端口";left=480;top=200;right=548;bottom=226;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=19};
+databaseUsername={cls="edit";left=120;top=240;right=200;bottom=266;autovscroll=false;edge=1;font=LOGFONT(name='微软雅黑');tabstop=1;z=22};
+databaseUsernameStatic={cls="static";text="数据库用户名";left=40;top=240;right=112;bottom=266;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=21};
+groupbox1={cls="groupbox";text="项目设置";left=32;top=24;right=616;bottom=128;edge=1;font=LOGFONT(name='微软雅黑');z=1};
+groupbox2={cls="groupbox";text="数据库设置";left=32;top=144;right=616;bottom=280;edge=1;font=LOGFONT(name='微软雅黑');z=10};
+hasJUnit={cls="checkbox";text="是否使用JUnit";left=504;top=48;right=608;bottom=64;font=LOGFONT(name='微软雅黑');z=6};
+packageName={cls="edit";left=336;top=48;right=497;bottom=74;autovscroll=false;edge=1;font=LOGFONT(name='微软雅黑');tabstop=1;z=5};
+packageNameLabel={cls="static";text="项目包名";left=272;top=48;right=333;bottom=76;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=4};
+projectName={cls="edit";left=96;top=48;right=257;bottom=74;autovscroll=false;edge=1;font=LOGFONT(name='微软雅黑');tabstop=1;z=3};
+projectNameLabel={cls="static";text="项目名";left=40;top=48;right=101;bottom=76;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=2};
+projectPath={cls="edit";left=96;top=88;right=381;bottom=114;autovscroll=false;edge=1;font=LOGFONT(name='微软雅黑');tabstop=1;z=8};
+projectPathButton={cls="button";text="选择..";left=400;top=88;right=494;bottom=114;font=LOGFONT(name='微软雅黑');tabstop=1;z=9};
+projectPathStatic={cls="static";text="项目地址";left=32;top=88;right=100;bottom=114;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=7}
 )
 /*}}*/
 
