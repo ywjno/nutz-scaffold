@@ -15,6 +15,9 @@
 				<file name="Apache DBCP.table" path="res\config\dataSource\Apache DBCP.table" comment="res\config\dataSource\Apache DBCP.table"/>
 			</folder>
 		</folder>
+		<folder name="imgs" path="res\imgs" comment="res\imgs">
+			<file name="alipay.jpg" path="res\imgs\alipay.jpg" comment="res\imgs\alipay.jpg"/>
+		</folder>
 		<folder name="templates" path="res\templates" comment="res\templates">
 			<file name="pom.xml.erb" path="res\templates\pom.xml.erb" comment="res\templates\pom.xml.erb"/>
 			<folder name="src" path="res\templates\src" comment="res\templates\src">

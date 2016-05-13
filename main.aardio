@@ -192,5 +192,20 @@ mainForm.createButton.oncommand = function(id,event){
     mainForm.msgbox("项目脚手架生成完成", "")
 }
 
+import win.ui.menu;
+var menuFile = win.ui.popmenu(mainForm);
+menuFile.add(
+    "支付宝捐赠",
+    function(id){
+        var alipayForm = win.form(text="支付宝捐赠";right=349;bottom=249;max=false;image=$"/res/imgs/alipay.jpg");
+        alipayForm.setPos(null,null,270,293,null,null);
+        alipayForm.show();
+    }
+);
+
+var menu = win.ui.menu(mainForm);
+menu.add("捐赠", menuFile)
+//menu.redraw();
+
 mainForm.show()
 return win.loopMessage();
