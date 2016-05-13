@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<project ver="10" name="nutz-scaffold" libEmbed="true" icon="D:\github\nutz\doc\ci\nutz-32.ico" ui="win" output="nutz-scaffold.exe" CompanyName="ywjno.dev" FileDescription="Nutz项目脚手架生成器" LegalCopyright="Copyright (C) ywjno 2016" ProductName="nutz-scaffold" InternalName="nutz-scaffold" FileVersion="0.1" ProductVersion="0.1" publishDir="/Publish/" dstrip="false">
+<project ver="10" name="nutz-scaffold" libEmbed="true" icon="D:\github\nutz\doc\ci\nutz-32.ico" ui="win" output="Nutz项目脚手架生成器.exe" CompanyName="ywjno.dev" FileDescription="Nutz项目脚手架生成器" LegalCopyright="Copyright (C) ywjno 2016" ProductName="nutz-scaffold" InternalName="nutz-scaffold" FileVersion="0.1" ProductVersion="0.1" publishDir="/Publish/" dstrip="true">
 	<file name="main.aardio" path="main.aardio" comment="main.aardio"/>
 	<folder name="资源文件" path="res" embed="true">
 		<folder name="config" path="res\config" comment="res\config">
 			<folder name="database" path="res\config\database" comment="res\config\database">
 				<file name="postgresql.table" path="res\config\database\postgresql.table" comment="res\config\database\postgresql.table"/>
+				<file name="oracle.table" path="res\config\database\oracle.table" comment="res\config\database\oracle.table"/>
 				<file name="mysql.table" path="res\config\database\mysql.table" comment="res\config\database\mysql.table"/>
 			</folder>
 			<folder name="dataSource" path="res\config\dataSource" comment="res\config\dataSource">
@@ -17,6 +18,9 @@
 		</folder>
 		<folder name="imgs" path="res\imgs" comment="res\imgs">
 			<file name="alipay.jpg" path="res\imgs\alipay.jpg" comment="res\imgs\alipay.jpg"/>
+		</folder>
+		<folder name="lib" path="res\lib" comment="res\lib">
+			<file name="ojdbc14-10.2.0.4.0.jar" path="res\lib\ojdbc14-10.2.0.4.0.jar" comment="res\lib\ojdbc14-10.2.0.4.0.jar"/>
 		</folder>
 		<folder name="templates" path="res\templates" comment="res\templates">
 			<file name="pom.xml.erb" path="res\templates\pom.xml.erb" comment="res\templates\pom.xml.erb"/>

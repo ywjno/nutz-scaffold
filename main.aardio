@@ -11,7 +11,7 @@ mainForm.add(
 DataSourceStatic={cls="static";text="DataSource";left=288;top=168;right=356;bottom=194;align="center";center=1;transparent=1;z=13};
 createButton={cls="button";text="生成";left=48;top=336;right=177;bottom=363;tabstop=1;z=25};
 dataSource={cls="combobox";left=360;top=168;right=529;bottom=194;edge=1;items={"Druid";"HikariCP";"C3P0";"Tomcat JDBC Pool";"Apache DBCP"};mode="dropdownlist";tabstop=1;z=14};
-databaseAdapter={cls="combobox";left=120;top=168;right=280;bottom=194;edge=1;items={"mysql";"postgresql"};mode="dropdownlist";tabstop=1;z=12};
+databaseAdapter={cls="combobox";left=120;top=168;right=280;bottom=194;edge=1;items={"mysql";"postgresql";"oracle"};mode="dropdownlist";tabstop=1;z=12};
 databaseAdapterStatic={cls="static";text="数据库类型";left=40;top=168;right=108;bottom=194;align="center";center=1;transparent=1;z=11};
 databaseHost={cls="edit";left=360;top=200;right=480;bottom=226;autovscroll=false;edge=1;tabstop=1;z=18};
 databaseHostStatic={cls="static";text="数据库地址";left=288;top=200;right=356;bottom=226;align="center";center=1;transparent=1;z=17};
@@ -30,14 +30,14 @@ packageName={cls="edit";left=336;top=48;right=497;bottom=74;autovscroll=false;ed
 packageNameLabel={cls="static";text="项目包名";left=272;top=48;right=333;bottom=76;align="center";center=1;transparent=1;z=4};
 projectName={cls="edit";left=96;top=48;right=257;bottom=74;autovscroll=false;edge=1;tabstop=1;z=3};
 projectNameLabel={cls="static";text="项目名";left=40;top=48;right=101;bottom=76;align="center";center=1;transparent=1;z=2};
-projectPath={cls="edit";left=96;top=88;right=381;bottom=114;autovscroll=false;db=1;dl=1;dr=1;dt=1;edge=1;tabstop=1;z=8};
+projectPath={cls="edit";left=96;top=88;right=381;bottom=114;autovscroll=false;edge=1;tabstop=1;z=8};
 projectPathButton={cls="button";text="选择..";left=400;top=88;right=494;bottom=114;tabstop=1;z=9};
 projectPathStatic={cls="static";text="项目地址";left=32;top=88;right=100;bottom=114;align="center";center=1;transparent=1;z=7}
 )
 /*}}*/
 
 mainForm.projectPath.oncommand = function(id,event){
-    //mainForm.msgbox( mainForm.projectPath.text ); 
+    //mainForm.msgbox( mainForm.projectPath.text );
 }
 
 mainForm.projectPathButton.oncommand = function(id,event){
@@ -99,7 +99,7 @@ mainForm.createButton.oncommand = function(id,event){
         return;
     }
 */
-    
+
     var projectPath = fsys.path.append(mainForm.projectPath.text, mainForm.projectName.text)
     if (!io.exist(projectPath)) {
         fsys.createDir(projectPath);
@@ -130,7 +130,7 @@ mainForm.createButton.oncommand = function(id,event){
     if (junit) {
         fsys.createDir(testPath);
     }
-    
+
     fsys.createDir(resourcesPath + "/chain");
     fsys.createDir(resourcesPath + "/custom");
     fsys.createDir(resourcesPath + "/ioc");
@@ -174,6 +174,11 @@ mainForm.createButton.oncommand = function(id,event){
         password = mainForm.databasePassword.text
     }
     string.save(resourcesPath + "/custom/db.properties", dbTemplate.format(dbOption))
+    // oracle
+    if ("oracle" == mainForm.databaseAdapter.selText) {
+        fsys.createDir(projectPath + "/lib");
+        fsys.copy("/res/lib/ojdbc14-10.2.0.4.0.jar", projectPath + "/lib")
+    }
 
     // dao.js
     var daoTemplate = string.erb(string.load("/res/templates/src/main/resources/ioc/dao.js.erb"));
@@ -188,7 +193,7 @@ mainForm.createButton.oncommand = function(id,event){
 
     bootstrap.javabuilder(srcPath, mainForm.packageName.text, projectName).build();
     bootstrap.webappbuilder(fsys.path.append(projectPath, 'src/main'), mainForm.packageName.text, projectName).build();
-    
+
     mainForm.msgbox("项目脚手架生成完成", "")
 }
 

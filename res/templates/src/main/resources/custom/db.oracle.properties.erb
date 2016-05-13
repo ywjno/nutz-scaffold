@@ -1,0 +1,7 @@
+#oracle
+db.url=jdbc:oracle:thin:@//<%= host %>:<%= port %>/<%= database %>
+db.driver=oracle.jdbc.driver.OracleDriver
+db.username=<%= username %>
+db.password=<%= password %>
+db.validationQuery=select 1 from dual
+db.maxActive=100
