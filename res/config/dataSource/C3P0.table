@@ -1,0 +1,5 @@
+﻿{dataSource='"type": "com.mchange.v2.c3p0.ComboPooledDataSource",\r\n        "events": {\r\n            "depose": "close"\r\n        },\r\n        "fields": {\r\n            "driverClass": {java:"$conf.get(\'db.driver\')"},\r\n            "jdbcUrl": {java:"$conf.get(\'db.url\')"},\r\n            "user": {java:"$conf.get(\'db.username\')"},\r\n            "password": {java:"$conf.get(\'db.password\')"},\r\n            "autoCommitOnClose": true\r\n        }';dependency="<dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.5.2</version>
+        </dependency>"}

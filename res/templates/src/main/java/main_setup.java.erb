@@ -1,0 +1,22 @@
+package <%= class_package %>;
+
+import org.nutz.log.Log;
+import org.nutz.log.Logs;
+import org.nutz.mvc.NutConfig;
+import org.nutz.mvc.Setup;
+
+public class MainSetup implements Setup {
+
+    private final static Log log = Logs.get();
+
+    @Override
+    public void init(NutConfig nc) {
+        MainConfig conf = nc.getIoc().get(MainConfig.class, "conf");
+        nc.setAttribute("rs", conf.getAppRs());
+        nc.setAttribute("appnm", conf.get("app-name", "<%= java_style_project_name %>"));
+        log.infof("<%= java_style_project_name %> version %s", <%= java_style_project_name %>.VERSION);
+    }
+
+    @Override
+    public void destroy(NutConfig nc) {}
+}

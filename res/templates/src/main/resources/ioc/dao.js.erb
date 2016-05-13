@@ -1,0 +1,11 @@
+var ioc = {
+    "dataSource": {
+        <%= data_source %>
+    },
+    "dao": {
+        "type": "org.nutz.dao.impl.NutDao",
+        "args": [{
+            "refer": "dataSource"
+        }]
+    }
+};

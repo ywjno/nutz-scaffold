@@ -1,0 +1,5 @@
+﻿{dataSource='"type": "com.alibaba.druid.pool.DruidDataSource",\r\n        "events": {\r\n            "create": "init",\r\n            "depose": "close"\r\n        },\r\n        "fields": {\r\n            "driverClassName": {java:"$conf.get(\'db.driver\')"},\r\n            "url": {java:"$conf.get(\'db.url\')"},\r\n            "username": {java:"$conf.get(\'db.username\')"},\r\n            "password": {java:"$conf.get(\'db.password\')"},\r\n            "validationQuery": {java:"$conf.get(\'db.validationQuery\')"},\r\n            "maxActive": {java:"$conf.get(\'db.maxActive\')"},\r\n            "testWhileIdle" : true,\r\n            "defaultAutoCommit": false\r\n        }';dependency="<dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.18</version>
+        </dependency>"}

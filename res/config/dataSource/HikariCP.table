@@ -1,0 +1,10 @@
+﻿{dataSource='        "type": "com.zaxxer.hikari.HikariDataSource",\r\n        "events": {\r\n            "depose": "close"\r\n        },\r\n        "fields": {\r\n            "driverClassName": {java:"$conf.get(\'db.driver\')"},\r\n            "jdbcUrl": {java:"$conf.get(\'db.url\')"},\r\n            "username": {java:"$conf.get(\'db.username\')"},\r\n            "password": {java:"$conf.get(\'db.password\')"},\r\n            "autoCommit": false\r\n        }';dependency="<dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP-java6</artifactId>
+            <version>2.3.13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.21</version>
+        </dependency>"}

@@ -1,0 +1,19 @@
+package <%= class_package %>;
+
+import org.nutz.mvc.annotation.ChainBy;
+import org.nutz.mvc.annotation.IocBy;
+import org.nutz.mvc.annotation.Modules;
+import org.nutz.mvc.annotation.SetupBy;
+import org.nutz.mvc.ioc.provider.ComboIocProvider;
+
+@Modules(scanPackage = true, packages = "<%= class_package %>.modules")
+@IocBy(type = ComboIocProvider.class,
+        args = {"*js",
+                "ioc",
+                "*anno",
+                "<%= class_package %>.modules",
+                "*tx",
+                "*async"})
+@SetupBy(MainSetup.class)
+@ChainBy(args = {"chain"})
+public class MainModule {}
