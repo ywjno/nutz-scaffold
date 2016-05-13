@@ -6,7 +6,7 @@ import bootstrap.javabuilder;
 import bootstrap.webappbuilder;
 import fsys.config;
 /*DSG{{*/
-mainForm = win.form(text="Nutz项目脚手架创建工具";right=671;bottom=407;max=false)
+mainForm = win.form(text="Nutz项目脚手架创建工具";right=655;bottom=407;border="dialog frame";max=false)
 mainForm.add(
 DataSourceStatic={cls="static";text="DataSource";left=288;top=168;right=356;bottom=194;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=13};
 createButton={cls="button";text="生成";left=48;top=336;right=177;bottom=363;font=LOGFONT(name='微软雅黑');tabstop=1;z=25};
@@ -23,8 +23,8 @@ databasePort={cls="edit";text="3306";left=552;top=200;right=608;bottom=226;autov
 databasePortStatic={cls="static";text="数据库端口";left=480;top=200;right=548;bottom=226;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=19};
 databaseUsername={cls="edit";left=120;top=240;right=200;bottom=266;autovscroll=false;edge=1;font=LOGFONT(name='微软雅黑');tabstop=1;z=22};
 databaseUsernameStatic={cls="static";text="数据库用户名";left=40;top=240;right=112;bottom=266;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=21};
-groupbox1={cls="groupbox";text="项目设置";left=32;top=24;right=616;bottom=128;edge=1;font=LOGFONT(name='微软雅黑');z=1};
-groupbox2={cls="groupbox";text="数据库设置";left=32;top=144;right=616;bottom=280;edge=1;font=LOGFONT(name='微软雅黑');z=10};
+groupbox1={cls="groupbox";text="项目设置";left=32;top=24;right=624;bottom=128;edge=1;font=LOGFONT(name='微软雅黑');z=1};
+groupbox2={cls="groupbox";text="数据库设置";left=32;top=144;right=624;bottom=280;edge=1;font=LOGFONT(name='微软雅黑');z=10};
 hasJUnit={cls="checkbox";text="是否使用JUnit";left=504;top=48;right=608;bottom=64;font=LOGFONT(name='微软雅黑');z=6};
 packageName={cls="edit";left=336;top=48;right=497;bottom=74;autovscroll=false;edge=1;font=LOGFONT(name='微软雅黑');tabstop=1;z=5};
 packageNameLabel={cls="static";text="项目包名";left=272;top=48;right=333;bottom=76;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=4};
@@ -202,8 +202,8 @@ var menuFile = win.ui.popmenu(mainForm);
 menuFile.add(
     "支付宝捐赠",
     function(id){
-        var alipayForm = win.form(text="支付宝捐赠";right=349;bottom=249;max=false;image=$"/res/imgs/alipay.jpg");
-        alipayForm.setPos(null,null,270,293,null,null);
+        var alipayForm = win.form(text="支付宝捐赠";right=349;bottom=249;border="dialog frame";max=false;image=$"/res/imgs/alipay.jpg");
+        alipayForm.setPos(null,null,262,284,null,null);
         alipayForm.show();
     }
 );
