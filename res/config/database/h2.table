@@ -1,0 +1,5 @@
+﻿{port="";dependency="<dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.191</version>
+        </dependency>"}

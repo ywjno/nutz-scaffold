@@ -11,7 +11,7 @@ mainForm.add(
 DataSourceStatic={cls="static";text="DataSource";left=288;top=168;right=356;bottom=194;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=13};
 createButton={cls="button";text="生成";left=48;top=336;right=177;bottom=363;font=LOGFONT(name='微软雅黑');tabstop=1;z=25};
 dataSource={cls="combobox";left=360;top=168;right=529;bottom=194;edge=1;font=LOGFONT(name='微软雅黑');items={"Druid";"HikariCP";"C3P0";"Tomcat JDBC Pool";"Apache DBCP"};mode="dropdownlist";tabstop=1;z=14};
-databaseAdapter={cls="combobox";left=120;top=168;right=280;bottom=194;edge=1;font=LOGFONT(name='微软雅黑');items={"mysql";"postgresql";"oracle"};mode="dropdownlist";tabstop=1;z=12};
+databaseAdapter={cls="combobox";left=120;top=168;right=280;bottom=194;edge=1;font=LOGFONT(name='微软雅黑');items={"mysql";"postgresql";"oracle";"h2"};mode="dropdownlist";tabstop=1;z=12};
 databaseAdapterStatic={cls="static";text="数据库类型";left=40;top=168;right=108;bottom=194;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=11};
 databaseHost={cls="edit";left=360;top=200;right=480;bottom=226;autovscroll=false;edge=1;font=LOGFONT(name='微软雅黑');tabstop=1;z=18};
 databaseHostStatic={cls="static";text="数据库地址";left=288;top=200;right=356;bottom=226;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=17};
@@ -49,6 +49,28 @@ var databaseConfig = fsys.config("/res/config/database");
 mainForm.databaseAdapter.oncommand = function(id,event){
     if (event == 0x1/*_CBN_SELCHANGE*/) {
         mainForm.databasePort.text = databaseConfig[mainForm.databaseAdapter.selText].port
+        if("h2" == mainForm.databaseAdapter.selText){
+            mainForm.databaseName.disabled = true;
+            mainForm.databaseHost.disabled = true;
+            mainForm.databasePort.disabled = true;
+            mainForm.databaseUsername.disabled = true;
+            mainForm.databasePassword.disabled = true;
+
+            mainForm.databaseName.text = "";
+            mainForm.databaseHost.text = "";
+            mainForm.databasePort.text = "";
+            mainForm.databaseUsername.text = "sa";
+            mainForm.databasePassword.text = "";
+        }
+        else {
+            mainForm.databaseUsername.text = "";
+
+            mainForm.databaseName.disabled = false;
+            mainForm.databaseHost.disabled = false;
+            mainForm.databasePort.disabled = false;
+            mainForm.databaseUsername.disabled = false;
+            mainForm.databasePassword.disabled = false;
+        }
 /**
         if (mainForm.databaseAdapter.selIndex == 1) {
             mainForm.databasePort.text = "";
@@ -166,12 +188,22 @@ mainForm.createButton.oncommand = function(id,event){
 
     // db.properties
     var dbTemplate = string.erb(string.load("/res/templates/src/main/resources/custom/db." + mainForm.databaseAdapter.selText + ".properties.erb"));
-    var dbOption = {
-        host = mainForm.databaseHost.text;
-        port = mainForm.databasePort.text;
-        database = mainForm.databaseName.text;
-        username = mainForm.databaseUsername.text;
-        password = mainForm.databasePassword.text
+    var dbOption = {}
+    // h2
+    if("h2" == mainForm.databaseAdapter.selText){
+        fsys.createDir(projectPath + "/db");
+        dbOption = {
+            host = projectPath;
+            database = string.lower(projectName)
+        }
+    } else {
+        dbOption = {
+            host = mainForm.databaseHost.text;
+            port = mainForm.databasePort.text;
+            database = mainForm.databaseName.text;
+            username = mainForm.databaseUsername.text;
+            password = mainForm.databasePassword.text
+        }
     }
     string.save(resourcesPath + "/custom/db.properties", dbTemplate.format(dbOption))
     // oracle
