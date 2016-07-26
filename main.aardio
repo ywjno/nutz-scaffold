@@ -209,7 +209,6 @@ mainForm.createButton.oncommand = function(id,event){
     // oracle
     if ("oracle" == mainForm.databaseAdapter.selText) {
         fsys.createDir(projectPath + "/lib");
-        fsys.copy("/res/lib/ojdbc14-10.2.0.4.0.jar", projectPath + "/lib")
     }
 
     // dao.js
