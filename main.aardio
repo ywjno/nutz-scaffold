@@ -207,9 +207,11 @@ mainForm.createButton.oncommand = function(id,event){
     }
     string.save(resourcesPath + "/custom/db.properties", dbTemplate.format(dbOption))
     // oracle
+/*
     if ("oracle" == mainForm.databaseAdapter.selText) {
         fsys.createDir(projectPath + "/lib");
     }
+*/
 
     // dao.js
     var daoTemplate = string.erb(string.load("/res/templates/src/main/resources/ioc/dao.js.erb"));
