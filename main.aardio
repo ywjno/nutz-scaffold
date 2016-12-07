@@ -157,6 +157,9 @@ mainForm.createButton.oncommand = function(id,event){
     fsys.createDir(resourcesPath + "/custom");
     fsys.createDir(resourcesPath + "/ioc");
 
+    // gitignore
+    ..fsys.copy("/res/templates/.gitignore", projectPath + "/.gitignore");
+
     // pom.xml
     var pomTemplate = string.erb(string.load("/res/templates/pom.xml.erb"))
     var pomOption = {group_id = mainForm.packageName.text; project_name = mainForm.projectName.text}

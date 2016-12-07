@@ -4,55 +4,65 @@
 	<folder name="资源文件" path="res" embed="true">
 		<folder name="config" path="res\config" comment="res\config">
 			<folder name="database" path="res\config\database" comment="res\config\database">
-				<file name="postgresql.table" path="res\config\database\postgresql.table" comment="res\config\database\postgresql.table"/>
-				<file name="oracle.table" path="res\config\database\oracle.table" comment="res\config\database\oracle.table"/>
+				<file name="h2.table" path="res\config\database\h2.table" comment="res\config\database\h2.table"/>
 				<file name="mysql.table" path="res\config\database\mysql.table" comment="res\config\database\mysql.table"/>
+				<file name="oracle.table" path="res\config\database\oracle.table" comment="res\config\database\oracle.table"/>
+				<file name="postgresql.table" path="res\config\database\postgresql.table" comment="res\config\database\postgresql.table"/>
 			</folder>
 			<folder name="dataSource" path="res\config\dataSource" comment="res\config\dataSource">
-				<file name="Tomcat JDBC Pool.table" path="res\config\dataSource\Tomcat JDBC Pool.table" comment="res\config\dataSource\Tomcat JDBC Pool.table"/>
-				<file name="HikariCP.table" path="res\config\dataSource\HikariCP.table" comment="res\config\dataSource\HikariCP.table"/>
-				<file name="Druid.table" path="res\config\dataSource\Druid.table" comment="res\config\dataSource\Druid.table"/>
-				<file name="C3P0.table" path="res\config\dataSource\C3P0.table" comment="res\config\dataSource\C3P0.table"/>
 				<file name="Apache DBCP.table" path="res\config\dataSource\Apache DBCP.table" comment="res\config\dataSource\Apache DBCP.table"/>
+				<file name="C3P0.table" path="res\config\dataSource\C3P0.table" comment="res\config\dataSource\C3P0.table"/>
+				<file name="Druid.table" path="res\config\dataSource\Druid.table" comment="res\config\dataSource\Druid.table"/>
+				<file name="HikariCP.table" path="res\config\dataSource\HikariCP.table" comment="res\config\dataSource\HikariCP.table"/>
+				<file name="Tomcat JDBC Pool.table" path="res\config\dataSource\Tomcat JDBC Pool.table" comment="res\config\dataSource\Tomcat JDBC Pool.table"/>
 			</folder>
 		</folder>
 		<folder name="imgs" path="res\imgs" comment="res\imgs">
 			<file name="alipay.jpg" path="res\imgs\alipay.jpg" comment="res\imgs\alipay.jpg"/>
 		</folder>
-		<folder name="templates" path="res\templates" comment="res\templates" embed="false">
+		<folder name="templates" path="res\templates" comment="res\templates">
 			<file name="pom.xml.erb" path="res\templates\pom.xml.erb" comment="res\templates\pom.xml.erb"/>
+			<folder name="db" path="res\templates\db" comment="res\templates\db">
+				<file name=".keep" path="res\templates\db\.keep" comment="res\templates\db\.keep"/>
+			</folder>
 			<folder name="src" path="res\templates\src" comment="res\templates\src">
 				<folder name="main" path="res\templates\src\main" comment="res\templates\src\main">
 					<folder name="java" path="res\templates\src\main\java" comment="res\templates\src\main\java">
-						<file name="main_setup.java.erb" path="res\templates\src\main\java\main_setup.java.erb" comment="res\templates\src\main\java\main_setup.java.erb"/>
-						<file name="main_module.java.erb" path="res\templates\src\main\java\main_module.java.erb" comment="res\templates\src\main\java\main_module.java.erb"/>
-						<file name="main_launcher.java.erb" path="res\templates\src\main\java\main_launcher.java.erb" comment="res\templates\src\main\java\main_launcher.java.erb"/>
-						<file name="main_config.java.erb" path="res\templates\src\main\java\main_config.java.erb" comment="res\templates\src\main\java\main_config.java.erb"/>
 						<file name="bootstrap.java.erb" path="res\templates\src\main\java\bootstrap.java.erb" comment="res\templates\src\main\java\bootstrap.java.erb"/>
+						<file name="main_config.java.erb" path="res\templates\src\main\java\main_config.java.erb" comment="res\templates\src\main\java\main_config.java.erb"/>
+						<file name="main_launcher.java.erb" path="res\templates\src\main\java\main_launcher.java.erb" comment="res\templates\src\main\java\main_launcher.java.erb"/>
+						<file name="main_module.java.erb" path="res\templates\src\main\java\main_module.java.erb" comment="res\templates\src\main\java\main_module.java.erb"/>
+						<file name="main_setup.java.erb" path="res\templates\src\main\java\main_setup.java.erb" comment="res\templates\src\main\java\main_setup.java.erb"/>
 						<folder name="modules" path="res\templates\src\main\java\modules" comment="res\templates\src\main\java\modules">
-							<file name="home_module.java.erb" path="res\templates\src\main\java\modules\home_module.java.erb" comment="res\templates\src\main\java\modules\home_module.java.erb"/>
 							<file name="base_module.java.erb" path="res\templates\src\main\java\modules\base_module.java.erb" comment="res\templates\src\main\java\modules\base_module.java.erb"/>
+							<file name="home_module.java.erb" path="res\templates\src\main\java\modules\home_module.java.erb" comment="res\templates\src\main\java\modules\home_module.java.erb"/>
 						</folder>
 					</folder>
 					<folder name="resources" path="res\templates\src\main\resources" comment="res\templates\src\main\resources">
-						<file name="web.properties.erb" path="res\templates\src\main\resources\web.properties.erb" comment="res\templates\src\main\resources\web.properties.erb"/>
 						<file name="log4j.properties.erb" path="res\templates\src\main\resources\log4j.properties.erb" comment="res\templates\src\main\resources\log4j.properties.erb"/>
+						<file name="web.properties.erb" path="res\templates\src\main\resources\web.properties.erb" comment="res\templates\src\main\resources\web.properties.erb"/>
 						<folder name="chain" path="res\templates\src\main\resources\chain" comment="res\templates\src\main\resources\chain">
 							<file name="default.js" path="res\templates\src\main\resources\chain\default.js" comment="res\templates\src\main\resources\chain\default.js"/>
 						</folder>
 						<folder name="custom" path="res\templates\src\main\resources\custom" comment="res\templates\src\main\resources\custom">
-							<file name="db.postgresql.properties.erb" path="res\templates\src\main\resources\custom\db.postgresql.properties.erb" comment="res\templates\src\main\resources\custom\db.postgresql.properties.erb"/>
+							<file name="db.h2.properties.erb" path="res\templates\src\main\resources\custom\db.h2.properties.erb" comment="res\templates\src\main\resources\custom\db.h2.properties.erb"/>
 							<file name="db.mysql.properties.erb" path="res\templates\src\main\resources\custom\db.mysql.properties.erb" comment="res\templates\src\main\resources\custom\db.mysql.properties.erb"/>
+							<file name="db.oracle.properties.erb" path="res\templates\src\main\resources\custom\db.oracle.properties.erb" comment="res\templates\src\main\resources\custom\db.oracle.properties.erb"/>
+							<file name="db.postgresql.properties.erb" path="res\templates\src\main\resources\custom\db.postgresql.properties.erb" comment="res\templates\src\main\resources\custom\db.postgresql.properties.erb"/>
 						</folder>
 						<folder name="ioc" path="res\templates\src\main\resources\ioc" comment="res\templates\src\main\resources\ioc">
-							<file name="dao.js.erb" path="res\templates\src\main\resources\ioc\dao.js.erb" comment="res\templates\src\main\resources\ioc\dao.js.erb"/>
 							<file name="conf.js.erb" path="res\templates\src\main\resources\ioc\conf.js.erb" comment="res\templates\src\main\resources\ioc\conf.js.erb"/>
+							<file name="dao.js.erb" path="res\templates\src\main\resources\ioc\dao.js.erb" comment="res\templates\src\main\resources\ioc\dao.js.erb"/>
 						</folder>
 					</folder>
 					<folder name="webapp" path="res\templates\src\main\webapp" comment="res\templates\src\main\webapp">
 						<folder name="rs" path="res\templates\src\main\webapp\rs" comment="res\templates\src\main\webapp\rs">
-							<folder name="css" path="res\templates\src\main\webapp\rs\css" comment="res\templates\src\main\webapp\rs\css"/>
-							<folder name="js" path="res\templates\src\main\webapp\rs\js" comment="res\templates\src\main\webapp\rs\js"/>
+							<folder name="css" path="res\templates\src\main\webapp\rs\css" comment="res\templates\src\main\webapp\rs\css">
+								<file name=".keep" path="res\templates\src\main\webapp\rs\css\.keep" comment="res\templates\src\main\webapp\rs\css\.keep"/>
+							</folder>
+							<folder name="js" path="res\templates\src\main\webapp\rs\js" comment="res\templates\src\main\webapp\rs\js">
+								<file name=".keep" path="res\templates\src\main\webapp\rs\js\.keep" comment="res\templates\src\main\webapp\rs\js\.keep"/>
+							</folder>
 						</folder>
 						<folder name="WEB-INF" path="res\templates\src\main\webapp\WEB-INF" comment="res\templates\src\main\webapp\WEB-INF">
 							<file name="web.xml.erb" path="res\templates\src\main\webapp\WEB-INF\web.xml.erb" comment="res\templates\src\main\webapp\WEB-INF\web.xml.erb"/>
@@ -65,10 +75,10 @@
 								</folder>
 							</folder>
 							<folder name="tld" path="res\templates\src\main\webapp\WEB-INF\tld" comment="res\templates\src\main\webapp\WEB-INF\tld">
-								<file name="x.tld" path="res\templates\src\main\webapp\WEB-INF\tld\x.tld" comment="res\templates\src\main\webapp\WEB-INF\tld\x.tld"/>
-								<file name="fn.tld" path="res\templates\src\main\webapp\WEB-INF\tld\fn.tld" comment="res\templates\src\main\webapp\WEB-INF\tld\fn.tld"/>
-								<file name="fmt.tld" path="res\templates\src\main\webapp\WEB-INF\tld\fmt.tld" comment="res\templates\src\main\webapp\WEB-INF\tld\fmt.tld"/>
 								<file name="c.tld" path="res\templates\src\main\webapp\WEB-INF\tld\c.tld" comment="res\templates\src\main\webapp\WEB-INF\tld\c.tld"/>
+								<file name="fmt.tld" path="res\templates\src\main\webapp\WEB-INF\tld\fmt.tld" comment="res\templates\src\main\webapp\WEB-INF\tld\fmt.tld"/>
+								<file name="fn.tld" path="res\templates\src\main\webapp\WEB-INF\tld\fn.tld" comment="res\templates\src\main\webapp\WEB-INF\tld\fn.tld"/>
+								<file name="x.tld" path="res\templates\src\main\webapp\WEB-INF\tld\x.tld" comment="res\templates\src\main\webapp\WEB-INF\tld\x.tld"/>
 							</folder>
 						</folder>
 					</folder>
