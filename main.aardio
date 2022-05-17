@@ -10,7 +10,7 @@ mainForm = win.form(text="Nutz项目脚手架创建工具";right=655;bottom=407;
 mainForm.add(
 DataSourceStatic={cls="static";text="DataSource";left=288;top=168;right=356;bottom=194;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=13};
 createButton={cls="button";text="生成";left=48;top=336;right=177;bottom=363;font=LOGFONT(name='微软雅黑');tabstop=1;z=25};
-dataSource={cls="combobox";left=360;top=168;right=529;bottom=194;edge=1;font=LOGFONT(name='微软雅黑');items={"Druid";"HikariCP";"C3P0";"Tomcat JDBC Pool";"Apache DBCP"};mode="dropdownlist";tabstop=1;z=14};
+dataSource={cls="combobox";left=360;top=168;right=529;bottom=194;edge=1;font=LOGFONT(name='微软雅黑');items={"HikariCP";"Druid";"C3P0";"Tomcat JDBC Pool";"Apache DBCP"};mode="dropdownlist";tabstop=1;z=14};
 databaseAdapter={cls="combobox";left=120;top=168;right=280;bottom=194;edge=1;font=LOGFONT(name='微软雅黑');items={"mysql";"postgresql";"oracle";"h2"};mode="dropdownlist";tabstop=1;z=12};
 databaseAdapterStatic={cls="static";text="数据库类型";left=40;top=168;right=108;bottom=194;align="center";center=1;font=LOGFONT(name='微软雅黑');transparent=1;z=11};
 databaseHost={cls="edit";left=360;top=200;right=480;bottom=226;autovscroll=false;edge=1;font=LOGFONT(name='微软雅黑');tabstop=1;z=18};

@@ -20,14 +20,14 @@
 		<folder name="imgs" path="res\imgs" comment="res\imgs">
 			<file name="alipay.jpg" path="res\imgs\alipay.jpg" comment="res\imgs\alipay.jpg"/>
 		</folder>
-		<folder name="templates" path="res\templates" comment="res\templates">
+		<folder name="templates" path="res\templates" comment="res\templates" local="false" embed="false">
 			<file name=".gitignore" path="res\templates\.gitignore" comment="res\templates\.gitignore"/>
 			<file name="pom.xml.erb" path="res\templates\pom.xml.erb" comment="res\templates\pom.xml.erb"/>
 			<folder name="db" path="res\templates\db" comment="res\templates\db">
 				<file name=".keep" path="res\templates\db\.keep" comment="res\templates\db\.keep"/>
 			</folder>
 			<folder name="src" path="res\templates\src" comment="res\templates\src">
-				<folder name="main" path="res\templates\src\main" comment="res\templates\src\main">
+				<folder name="main" path="res\templates\src\main" comment="res\templates\src\main" local="false" embed="false">
 					<folder name="java" path="res\templates\src\main\java" comment="res\templates\src\main\java">
 						<file name="bootstrap.java.erb" path="res\templates\src\main\java\bootstrap.java.erb" comment="res\templates\src\main\java\bootstrap.java.erb"/>
 						<file name="main_config.java.erb" path="res\templates\src\main\java\main_config.java.erb" comment="res\templates\src\main\java\main_config.java.erb"/>
